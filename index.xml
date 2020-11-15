@@ -6,7 +6,30 @@
     <description>Recent content on Tony&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 15 Nov 2020 08:00:00 +0800</lastBuildDate><atom:link href="https://tonytoolsn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 13:00:00 +0800</lastBuildDate><atom:link href="https://tonytoolsn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>個人文章撰寫流程紀錄</title>
+      <link>https://tonytoolsn.github.io/blog/lifestyle_article/</link>
+      <pubDate>Sun, 15 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/lifestyle_article/</guid>
+      <description>撰寫部落格流程 選擇題材 -&amp;gt; 蒐集資料 -&amp;gt; 段落大綱 -&amp;gt; 文章段落 -&amp;gt; 檢查編輯 -&amp;gt;分享出去</description>
+    </item>
+    
+    <item>
+      <title>Laravel開發環境建置</title>
+      <link>https://tonytoolsn.github.io/blog/software_laravel/</link>
+      <pubDate>Sun, 15 Nov 2020 08:15:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/software_laravel/</guid>
+      <description>Windows作業系統 1.安裝XAMPP
+2.安裝Visual Studio Code
+3.安裝Composer
+4.下載Laravel安裝器
+5.建立Laravel專案
+6.確認建置是否成功</description>
+    </item>
+    
     <item>
       <title>Markdowm基本語法</title>
       <link>https://tonytoolsn.github.io/blog/markdowm_language/</link>
@@ -18,10 +41,10 @@
     
     <item>
       <title>Markdowm好用編輯器-Typora</title>
-      <link>https://tonytoolsn.github.io/blog/software_typora/</link>
+      <link>https://tonytoolsn.github.io/blog/markdowm_typora/</link>
       <pubDate>Sun, 15 Nov 2020 08:00:00 +0800</pubDate>
       
-      <guid>https://tonytoolsn.github.io/blog/software_typora/</guid>
+      <guid>https://tonytoolsn.github.io/blog/markdowm_typora/</guid>
       <description>Typora介紹 Typora是一款由Abner Lee開發的輕量級Markdown編輯器，適用於OS X、Windows和Linux三種作業系統，是一款免費軟體。與其他Markdown編輯器不同的是，Typora沒有採用原始碼和預覽雙欄顯示的方式，而是採用所見即所得的編輯方式，實現了即時預覽的功能，但也可切換至原始碼編輯模式。
 Typora安裝: 下載點
 安裝流程 : 進到官方網站，Download下適用於您作業系統的版本。

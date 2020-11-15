@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>Tony&#39;s Blog</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="為網頁藝術家創造的 PHP 框架。">
+  <meta name="author" content="Tony">
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tonytoolsn.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tonytoolsn.github.io/images/favicon.png " type="image/x-icon">
+
+</head><body> <!-- preloader start -->
+<div class="preloader">
+    
+</div>
+<!-- preloader end --> 
+<!-- navigation -->
+<header class="navigation">
+    <div class="container">
+        
+        
+        <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+            <a class="navbar-brand" href="https://tonytoolsn.github.io">
+                <span class="text-body h3">Tony&#39;s Blog</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+                <i class="ti-menu h3"></i>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navigation">
+                <div class="desktop-view">
+                    <ul class="navbar-nav mr-auto">
+                        
+                        
+                        
+                    </ul>
+                </div>
+
+                <a class="navbar-brand mx-auto desktop-view" href="https://tonytoolsn.github.io"></a>
+
+                <ul class="navbar-nav">
+                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tonytoolsn.github.io/">Home</a>
+                    </li>
+                      
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tonytoolsn.github.io/about">About Me</a>
+                    </li>
+                     
+                </ul>
+
+                 <!-- search -->
+                <div class="search pl-lg-4">
+                    <button id="searchOpen" class="search-btn">
+                        <i class="ti-search"></i>
+                    </button>
+                    <div class="search-wrapper">
+                        <form action="https://tonytoolsn.github.io/search" class="h-100">
+                            <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter..." />
+                        </form>
+                        <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+                    </div>
+                </div>
+                 
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- /navigation -->
+
+
+<section class="section-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center">Laravel開發環境建置</h2>
+                <div class="mb-3 post-meta text-center">
+                    <span>By Tony</span>
+                    
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>15 November 2020</span>
+                    
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>
+                        
+                        <a href="/categories/laravel" class="text-primary">L a r a v e l</a>
+                        
+                    </span>
+                </div>
+                <div class="mt-1" style="border-top: 3px solid #dee2e6; height: 1rem;"></div>
+                
+                <div class="content mb-5">
+                    <blockquote>
+<h4 id="windows作業系統">Windows作業系統</h4>
+<p>1.安裝XAMPP</p>
+<p>2.安裝Visual Studio Code</p>
+<p>3.安裝Composer</p>
+<p>4.下載Laravel安裝器</p>
+<p>5.建立Laravel專案</p>
+<p>6.確認建置是否成功</p>
+<p>7.設定本地化網域(非必須)</p>
+<p>8.專案設定</p>
+<p>9.錯誤排除</p>
+</blockquote>
+<h2 id="laravel開發環境建置">Laravel開發環境建置</h2>
+<h4 id="windows作業系統-1">Windows作業系統</h4>
+<h4 id="1安裝xampp">1.安裝XAMPP</h4>
+<ul>
+<li>PHP + Apache + MariaDB懶人包</li>
+</ul>
+<p><a href="https://www.apachefriends.org/zh_tw/download.html">下載點</a></p>
+<p>請下載PHP 7.2.5以上版本，下載完後安裝，過程只需不斷按Next即可。</p>
+<hr>
+<h4 id="2安裝visual-studio-code">2.安裝Visual Studio Code</h4>
+<ul>
+<li>由微軟提供，可免費使用的IDE</li>
+</ul>
+<p><a href="https://code.visualstudio.com/download">下載點</a></p>
+<hr>
+<h4 id="3安裝composer">3.安裝Composer</h4>
+<ul>
+<li>用於管理所有PHP套件，包含Laravel， Composer-Setup.exe。</li>
+</ul>
+<p><a href="https://getcomposer.org/download/">下載點</a></p>
+<p>PS:如之前已安裝過，需升級成新版本，可使用以下指令</p>
+<pre><code>composer self-update
+</code></pre><hr>
+<h4 id="4下載laravel安裝器">4.下載Laravel安裝器</h4>
+<ul>
+<li>開啟cmd，輸入以下指令</li>
+</ul>
+<pre><code>composer global require laravel/installer
+</code></pre><hr>
+<h4 id="5建立laravel專案">5.建立Laravel專案</h4>
+<ul>
+<li>開啟cmd，切換到xampp的htdocs資料夾，輸入指令，路徑應根據您的狀況作調整</li>
+</ul>
+<pre><code>cd c:\xampp\htdocs
+</code></pre><ul>
+<li>如果要建立的是最新Laravel版本的專案，請輸入指令</li>
+</ul>
+<pre><code>//c:\xampp\htdocs
+//app_name 專案名稱
+
+laravel new app_name
+</code></pre><ul>
+<li>如果要建立指定Laravel版本的新專案，例如5.8，需使用composer，請輸入指令</li>
+</ul>
+<pre><code>//c:\xampp\htdocs
+
+composer create-project --prefer-dist laravel/laravel app_name &quot;5.8.*&quot;
+</code></pre><ul>
+<li>生成應用金鑰，開啟Terminal，切換到新建立的專案資料夾，請輸入指令</li>
+</ul>
+<pre><code>//c:\xampp\htdocs\app_name
+
+php artisan key:generate
+</code></pre><p>開啟專案，確定是否有.env檔案，如果找不到.env檔，可將.env.example檔案改名成.env</p>
+<hr>
+<h4 id="6確認建置是否成功">6.確認建置是否成功</h4>
+<p>請確保Apache服務和MySQL服務都有開啟</p>
+<p>開啟瀏覽器，輸入網址  http://localhost/app_name/public</p>
+<hr>
+<h4 id="7設定本地化網域非必須">7.設定本地化網域(非必須)</h4>
+<ul>
+<li>將所命名的網域指向到本機 127.0.0.1，作法是修改hosts，這裡以laravel.test為例</li>
+</ul>
+<pre><code>//C:\WINDOWS\system32\drivers\etc\hosts
+
+127.0.0.1 laravel.test #Laravel學習專案
+
+//輸入網址  http://laravel.test/app_name/public
+</code></pre><ul>
+<li>告訴此網域需要由哪個專案資料夾來接手，作法是修改httpd-vhost.conf，路徑應根據您的狀況作調整</li>
+</ul>
+<pre><code>//XAMPP資料夾\apache\conf\extra\httpd-vhosts.conf
+ 
+&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;c:\xampp\htdocs\app_name\public&quot;  
+    ServerName laravel.test       
+    &lt;Directory &quot;c:\xampp\htdocs\app_name\public&quot;&gt;
+        Options FollowSymLinks
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+    &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre><ul>
+<li>
+<p>要求Apache開啟時需讀取httpd-vhosts.conf，作法是修改 XAMPP資料夾\apache\conf\original\httpd.conf。找到httpd-vhosts.conf那一行，把前面的#註解移除。</p>
+</li>
+<li>
+<p>重開Apache服務，訪問http://laravel.test，看能否順利開啟</p>
+</li>
+</ul>
+<hr>
+<h4 id="8專案設定">8.專案設定</h4>
+<ul>
+<li>主設定檔修改 - 修改config/app.php，設定timezone時區與locale語系</li>
+</ul>
+<pre><code>//config/app.php
+
+'locale' =&gt; 'zh_TW',
+'timezone' =&gt; 'Asia/Taipei',
+</code></pre><ul>
+<li>隱私設定檔設定 - 修改.env檔案，所設的值不可以有空格</li>
+</ul>
+<pre><code>//.env
+
+APP_NAME=Blog //專案名稱
+APP_ENV=local //專案所在環境，local為本地端開發，production為正式上線環境
+APP_KEY //應用金鑰，不得為空，可透過 php artisan key:generate來生成
+APP_DEBUG=true //是否開啟除錯模式，正式上線環境建議關掉
+APP_URL=http://localhost/blog/public //專案網域，須設定到public資料夾
+
+DB_CONNECTION=mysql //所要連接的資料庫
+DB_HOST=127.0.0.1 //資料庫Ip Address
+DB_PORT=3306 //資料庫port號
+DB_DATABASE=blog //資料庫名稱
+DB_USERNAME=root //資料庫帳號
+DB_PASSWORD= //資料庫密碼
+</code></pre><hr>
+<h4 id="9錯誤排除">9.錯誤排除</h4>
+<ul>
+<li>
+<p>套件安裝錯誤 - 出現記憶體不足的錯誤導致安裝失敗</p>
+<p>解決方案:</p>
+<p>找到Apache資料夾內的php.ini(Windows版本在php資料夾內)，找到裏頭的一行設定&quot;memory_limit&quot;，將其值改成-1，即可不限定伺服器的記憶體空間</p>
+</li>
+<li>
+<p>套件安裝太慢 Comment</p>
+<p>解決方案:</p>
+<p>可能是Composer內核還是1.x版本，請升級到2.0.6以上，請開啟CMD輸入以下指令</p>
+</li>
+</ul>
+<pre><code>composer self-update --2
+</code></pre><ul>
+<li>
+<p>資料庫連線錯誤 - 出現1071 Specified key was too long; max key length is 767 bytes</p>
+<p>解決方法：</p>
+<p>開啟 app\Providers\AppServiceProvider.php</p>
+<p>加入以下程式碼：</p>
+</li>
+</ul>
+<pre><code>use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+</code></pre><ul>
+<li>
+<p>權限不足錯誤 - Mac開發環境出現storage資料夾的 failed to open stream:Permission denied</p>
+<p>解決方法:</p>
+<p>開啟Terminal，<strong>切換到專案資料夾後</strong>，輸入以下指令</p>
+</li>
+</ul>
+<pre><code>sudo chmod -R 777 storage
+</code></pre><ul>
+<li>
+<p>應用錯誤 - 出現No application encryption key has been specified - 錯誤原因是缺少應用的金鑰</p>
+<p>解決方案:</p>
+<p>開啟Terminal，切換到專案資料夾後，輸入以下指令</p>
+</li>
+</ul>
+<pre><code>php artisan key:generate
+</code></pre><p><a href="https://hackmd.io/@javck/H1nqUaNh8">參考資料</a></p>
+<p><a href="https://www.kocpc.com.tw/archives/165133">xampp安裝</a></p>
+<p><a href="https://tw.alphacamp.co/blog/visual-studio-code-editor-tutorial-and-extensions">vscode安裝</a></p>
+<p><a href="https://tony915.gitbooks.io/laravel4/content/install/install_composer.html">composer安裝</a></p>
+<p><a href="https://tony915.gitbooks.io/laravel4/content/install/install_laravel.html">laravel安裝</a></p>
+
+                </div>
+
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    var indexURL = "https://tonytoolsn.github.io/index.json"
+</script>
+
+<!-- JS Plugins --> 
+<script src="https://tonytoolsn.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/search.js"></script>
+ <!-- Main Script --> 
+<script src="https://tonytoolsn.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+            i[r] ||
+            function () {
+                (i[r].q = i[r].q || []).push(arguments);
+            }),
+            (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-183022311-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+    This site uses cookies. By continuing to use this website, you agree to their use.
+    <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+    (function ($) {
+    	const cookieBox = document.getElementById('js-cookie-box');
+    	const cookieButton = document.getElementById('js-cookie-button');
+    	if (!Cookies.get('cookie-box')) {
+    		cookieBox.classList.remove('cookie-box-hide');
+    		cookieButton.onclick = function () {
+    			Cookies.set('cookie-box', true, {
+    				expires:  2 
+    			});
+    			cookieBox.classList.add('cookie-box-hide');
+    		};
+    	}
+    })(jQuery);
+</script>
+
+
+<style>
+    .cookie-box {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        z-index: 9999;
+        padding: 1rem 2rem;
+        background: rgb(71, 71, 71);
+        transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+        color: #fdfdfd;
+    }
+
+    .cookie-box-hide {
+        display: none;
+    }
+</style>
+
+</body>
+</html>

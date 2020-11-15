@@ -18,10 +18,10 @@
     
     <item>
       <title>Markdowm好用編輯器-Typora</title>
-      <link>https://tonytoolsn.github.io/blog/software_typora/</link>
+      <link>https://tonytoolsn.github.io/blog/markdowm_typora/</link>
       <pubDate>Sun, 15 Nov 2020 08:00:00 +0800</pubDate>
       
-      <guid>https://tonytoolsn.github.io/blog/software_typora/</guid>
+      <guid>https://tonytoolsn.github.io/blog/markdowm_typora/</guid>
       <description>Typora介紹 Typora是一款由Abner Lee開發的輕量級Markdown編輯器，適用於OS X、Windows和Linux三種作業系統，是一款免費軟體。與其他Markdown編輯器不同的是，Typora沒有採用原始碼和預覽雙欄顯示的方式，而是採用所見即所得的編輯方式，實現了即時預覽的功能，但也可切換至原始碼編輯模式。
 Typora安裝: 下載點
 安裝流程 : 進到官方網站，Download下適用於您作業系統的版本。

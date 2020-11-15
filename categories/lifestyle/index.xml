@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LIFESTYLE on Tony&#39;s Blog</title>
+    <link>https://tonytoolsn.github.io/categories/lifestyle/</link>
+    <description>Recent content in LIFESTYLE on Tony&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 15 Nov 2020 13:00:00 +0800</lastBuildDate><atom:link href="https://tonytoolsn.github.io/categories/lifestyle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>個人文章撰寫流程紀錄</title>
+      <link>https://tonytoolsn.github.io/blog/lifestyle_article/</link>
+      <pubDate>Sun, 15 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/lifestyle_article/</guid>
+      <description>撰寫部落格流程 選擇題材 -&amp;gt; 蒐集資料 -&amp;gt; 段落大綱 -&amp;gt; 文章段落 -&amp;gt; 檢查編輯 -&amp;gt;分享出去</description>
+    </item>
+    
+  </channel>
+</rss>
