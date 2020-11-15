@@ -28,5 +28,32 @@ Typora安裝: 下載點
 Typora常用設定:  樹狀結構顯示 主題(T)  Typora常用段落(P):  二級標題 Crtl + 2 四級標題 Crtl + 4 有序清單 Ctrl + Shift + [ 無序清單 Ctrl + Shift + ] 表格 Ctrl + T 引言 Ctrl + Shift + Q 程式碼區塊 Ctrl + Shift + K  Typora常用格式(O):  粗體 Ctrl + B 程式碼 Ctrl + Shift + ` 超連結 Ctrl + K  Typora常用檢視(V):  原始碼模式 Ctrl + /  參考資料 wiki</description>
     </item>
     
+    <item>
+      <title>Markdowm基本語法</title>
+      <link>https://tonytoolsn.github.io/blog/markdowm1-copy/</link>
+      <pubDate>Wed, 29 Apr 2020 13:49:23 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/markdowm1-copy/</guid>
+      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+    </item>
+    
+    <item>
+      <title>Markdowm基本語法</title>
+      <link>https://tonytoolsn.github.io/blog/markdowm1/</link>
+      <pubDate>Wed, 29 Apr 2020 13:49:23 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/markdowm1/</guid>
+      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+    </item>
+    
+    <item>
+      <title>How To Use Checklists To Improve Your UX</title>
+      <link>https://tonytoolsn.github.io/blog/post-13/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/post-13/</guid>
+      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+    </item>
+    
   </channel>
 </rss>
