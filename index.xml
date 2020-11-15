@@ -6,7 +6,39 @@
     <description>Recent content on Tony&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 15 Nov 2020 13:00:00 +0800</lastBuildDate><atom:link href="https://tonytoolsn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 23:40:00 +0800</lastBuildDate><atom:link href="https://tonytoolsn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laravel-視圖View&amp;Blade</title>
+      <link>https://tonytoolsn.github.io/blog/laravel_view_blade/</link>
+      <pubDate>Sun, 15 Nov 2020 23:40:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/laravel_view_blade/</guid>
+      <description>View與視圖  將PHP轉成HTML檔之後傳出  舊有的PHP檔案  沒有Controller Model負責資料查詢 View負責處理HTML  Laravel的View設計  負責儲存HTML，並將要顯⽰動態資料的地⽅留出來，等傳⼊後替換  Blade樣板引擎  檔名需為*.</description>
+    </item>
+    
+    <item>
+      <title>Laravel-Route 路由</title>
+      <link>https://tonytoolsn.github.io/blog/laravel_routing/</link>
+      <pubDate>Sun, 15 Nov 2020 23:30:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/laravel_routing/</guid>
+      <description>Route 路由 路由負責管理網站所有的請求行為，根據訪問的網址以及請求動詞(GET.POST)來決定交由哪一個控制器的方法來處理
+ Laravel 5.3以前的版本
+只有⼀個路由檔案，位於app/Http/routes.php
+網⾴請求.API路由都寫在這裡
+ 負責的檔案 一般使用者透過瀏覽器所進行的請求都會交由routes/web.</description>
+    </item>
+    
+    <item>
+      <title>Laravel-MVC設計架構</title>
+      <link>https://tonytoolsn.github.io/blog/laravel_mvc/</link>
+      <pubDate>Sun, 15 Nov 2020 23:20:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/laravel_mvc/</guid>
+      <description>什麼是MVC設計架構? 在1974年提出，概念是將應⽤程式拆解成不同的功能區塊，各⾃處理負責事項
+ 四人幫(Gang of Four)並沒有把MVC作為一種設計模式︐而是把它當作”一組用 於建構使用者介面的類集合”︐因為它其實是由三個經典的設計模式組合而成︐ 分別為觀察者模式(Observer) . 策略模式(Strategy)和組合模式(Composite) 實作上把系統分成三個區塊︐分別為︓Model .</description>
+    </item>
+    
     <item>
       <title>個人文章撰寫流程紀錄</title>
       <link>https://tonytoolsn.github.io/blog/lifestyle_article/</link>

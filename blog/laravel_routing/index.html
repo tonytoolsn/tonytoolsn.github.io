@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>Tony&#39;s Blog</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="你的網站⽼是出現奇怪的網址請求嗎? 路由讓你更好管理請求! ">
+  <meta name="author" content="Tony">
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tonytoolsn.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tonytoolsn.github.io/images/favicon.png " type="image/x-icon">
+
+</head><body> <!-- preloader start -->
+<div class="preloader">
+    
+</div>
+<!-- preloader end --> 
+<!-- navigation -->
+<header class="navigation">
+    <div class="container">
+        
+        
+        <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+            <a class="navbar-brand" href="https://tonytoolsn.github.io">
+                <span class="text-body h3">Tony&#39;s Blog</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+                <i class="ti-menu h3"></i>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navigation">
+                <div class="desktop-view">
+                    <ul class="navbar-nav mr-auto">
+                        
+                        
+                        
+                    </ul>
+                </div>
+
+                <a class="navbar-brand mx-auto desktop-view" href="https://tonytoolsn.github.io"></a>
+
+                <ul class="navbar-nav">
+                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tonytoolsn.github.io/">Home</a>
+                    </li>
+                      
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tonytoolsn.github.io/about">About Me</a>
+                    </li>
+                     
+                </ul>
+
+                 <!-- search -->
+                <div class="search pl-lg-4">
+                    <button id="searchOpen" class="search-btn">
+                        <i class="ti-search"></i>
+                    </button>
+                    <div class="search-wrapper">
+                        <form action="https://tonytoolsn.github.io/search" class="h-100">
+                            <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter..." />
+                        </form>
+                        <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+                    </div>
+                </div>
+                 
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- /navigation -->
+
+
+<section class="section-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center">Laravel-Route 路由</h2>
+                <div class="mb-3 post-meta text-center">
+                    <span>By Tony</span>
+                    
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>15 November 2020</span>
+                    
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>
+                        
+                        <a href="/categories/laravel" class="text-primary">L a r a v e l</a>
+                        
+                    </span>
+                </div>
+                <div class="mt-1" style="border-top: 3px solid #dee2e6; height: 1rem;"></div>
+                
+                <div class="content mb-5">
+                    <h6 id="route-路由">Route 路由</h6>
+<p>路由負責管理網站所有的請求行為，根據訪問的網址以及請求動詞(GET.POST)來決定交由哪一個控制器的方法來處理</p>
+<blockquote>
+<p>Laravel 5.3以前的版本</p>
+<p>只有⼀個路由檔案，位於app/Http/routes.php</p>
+<p>網⾴請求.API路由都寫在這裡</p>
+</blockquote>
+<h6 id="負責的檔案">負責的檔案</h6>
+<p>一般使用者透過瀏覽器所進行的請求都會交由routes/web.php來設定
+而API相關的請求則是交由routes/api.php來設定</p>
+<h6 id="編寫路由規則">編寫路由規則</h6>
+<pre><code>Route::get('路徑','App\Http\Controllers\HomeController@index');
+</code></pre><p>get 請求動詞</p>
+<p>路徑 網址路徑</p>
+<p>控制器 負責處理此請求的控制器，8.x之後需要加上命名空間</p>
+<p>方法 負責處理此請求的方法</p>
+<p>規則判定由上至下逐一比對，只要符合路徑就傳遞給控制器</p>
+<p>8.X之後支援的新寫法</p>
+<pre><code>use App\Http\Controllers\HomeController;
+
+Route::get(‘路徑’,[HomeController::class,‘index’]);
+</code></pre><hr>
+<h6 id="route動詞">Route動詞</h6>
+<p>設定此規則所⽀援的請求⽅式</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">重要</th>
+<th style="text-align:center">較不重要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">GET.POST</td>
+<td style="text-align:center">PUT.PATCH.DELETE.OPTIONS. ANY.MATCH</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="聊聊closure">聊聊Closure</h6>
+<p>PHP的匿名函式</p>
+<pre><code>//匿名函式可當成物件.指派給變數當成參數傳遞
+
+Route::match(['get', 'post'], '/', function () {
+ return 'Hello World';
+});
+</code></pre><hr>
+<h6 id="直接在路由檔裡面耍流氓">直接在路由檔裡面耍流氓</h6>
+<p>你可以不經由控制器裡的方法來處理請求，直接在路由檔內搞定，但不建議這樣做</p>
+<pre><code>//routes/web.php
+Route::get('路徑',function(){
+    return 'Hello!';
+});
+</code></pre><hr>
+<h6 id="關於controllers控制器">關於Controllers控制器</h6>
+<p>位於app/Http/Controllers資料夾，可建立子資料夾</p>
+<p>⽤於管理Model.View</p>
+<p>建立檔案的指令</p>
+<pre><code>//app/Http/Controllers
+
+php artisan make:controller HomeController
+
+//建立⼀個不帶⽅法的Controller 
+
+php artisan make:controller Controller名稱
+
+//建立⼀個帶CRUD⽅法的Controller
+
+php artisan make:controller Controller名稱- -resource
+</code></pre><hr>
+<blockquote>
+<p>你不應該回傳Echo</p>
+<p>內容不會直接回傳給前端，還是會經過回應堆疊和中介層等等</p>
+</blockquote>
+<hr>
+<h6 id="路由可傳遞參數">路由可傳遞參數</h6>
+<pre><code>//routes/web.php
+
+Route::get('路徑/{id}',function($id){
+    return 'Hello ' . $id;
+});
+</code></pre><h6 id="可傳遞多個參數">可傳遞多個參數</h6>
+<pre><code>//routes/web.php
+
+Route::get('路徑/{id}/{name}',function($id,$name){
+    return 'Hello ' . $id . ',Name is ' . $name;
+});
+
+Route::get('posts/{post}/comments/{comment}', function ($post,
+$comment) {
+ //路徑分類⼀般都會有多個⽅法，都會加s，表⽰複數形
+});
+</code></pre><h6 id="可傳可不傳遞參數">可傳可不傳遞參數</h6>
+<pre><code>//routes/web.php
+//=代表預設值
+
+Route::get('路徑/{id?}',function($id = 1){
+    return 'Hello ' . $id;
+});
+</code></pre><hr>
+<p>設定路由群組</p>
+<pre><code>//prefix路徑前置詞，將所包含的路由規則路徑加⼊前置詞
+
+Route::group(['prefix' =&gt; 'demo'],function(){
+
+    Route::get('hello', function () {
+        return 'Hello' ;
+    });
+    
+    Route::get('world', function () {
+        return 'World';
+    });
+    
+});
+
+//namespace命名空間，將所包含的路由規則控制器類別加⼊命名空間
+
+Route::namespace(‘App\Http\Controllers\Admin’)-&gt;group(function () {
+ // 裡頭的控制器都包含在 以下命名空間”
+ App\Http\Controllers\Admin&quot;
+});
+</code></pre><p>設定路由名稱</p>
+<pre><code>//routes/web.php
+Route::get('demo/{id}','App\Http\Controllers\HomeController@index')-&gt;name('home.index');
+
+//resources/views/show.blade.php
+&lt;a href=&quot;{{ route(‘home.index’, [‘id’=&gt;1]) }}&quot;&gt;總覽頁&lt;/a&gt;
+</code></pre><hr>
+<h6 id="route-model-binding">Route Model Binding</h6>
+<p>只要在參數前宣告模型類別，⾃動為你⽤id進資料庫查詢該表，直接提供model物件給你</p>
+<pre><code>Route::get('api/users/{user}', function (App\User $user) {
+ return $user-&gt;email;
+});
+</code></pre><hr>
+<h6 id="進行轉址">進行轉址</h6>
+<h6 id="外部轉址">外部轉址</h6>
+<pre><code>//routes/web.php
+
+Route::get(‘baha’,function(){
+return redirect(‘[https://goblinlab.org](https://goblinlab.org/)’);
+});
+</code></pre><h6 id="內部轉址">內部轉址</h6>
+<pre><code>//routes/web.php
+
+Route::get(‘redirect’,function(){
+return redirect(url(‘hello’));
+});
+</code></pre><hr>
+<h6 id="設定路由名稱">設定路由名稱</h6>
+<p>以後設定URL可以搭配route()直接使⽤Name</p>
+<pre><code>//routes/web.php
+
+Route::get(‘users/{id}’,’App\Http\Controllers\UsersController@index')
+-&gt;name(‘users.index’);
+//resources/views/users.blade.php
+&lt;a href=“{{ route(‘users.index’, [‘id’=&gt;1]) }} ”&gt;
+</code></pre><hr>
+<h6 id="建立負責執轉址的路由規則">建立負責執⾏轉址的路由規則</h6>
+<p>直接建⽴⽤以轉址的路由規則</p>
+<pre><code>//路徑  網址  狀態碼
+
+Route::redirect(‘here’ , ’http://goblinlab.org’ , 301);
+</code></pre><hr>
+<h6 id="redirect的withinput">redirect()的withInput()</h6>
+<p>⽤於當⽤⼾輸⼊錯誤需要轉回表單⾴，並保存輸⼊內容</p>
+<pre><code>Route::post('form',function(){
+ return redirect('form')-&gt;withInput()
+ -&gt;with(['error' =&gt; true , 'message' =&gt; ‘Bad!’]);
+});
+</code></pre><hr>
+<h6 id="old">old()</h6>
+<p>⽤於轉回⾴⾯要取得保留的輸⼊內容</p>
+<pre><code>&lt;input name=“username” value=“&lt;?=
+old('username','default value') ?&gt;”&gt;
+</code></pre><hr>
+<h6 id="相關名詞說明">相關名詞說明</h6>
+<h6 id="spa-single-page-application">SPA Single Page Application</h6>
+<p>將網頁做成類似一般App應用樣貌的一頁式操作</p>
+<h6 id="closure">Closure</h6>
+<p>沒有名稱的匿名函式，一般用於封包程式碼且只用一次</p>
+<h6 id="facade">Facade</h6>
+<p>Laravel所提供的工具類別，包含大量好用的類別函式</p>
+<h6 id="middleware">Middleware</h6>
+<p>中介層，符合條件的請求在處理前會先執行的內容</p>
+<hr>
+<blockquote>
+<p>我該先掌握哪些Route技巧?
+• 會撰寫基本路由語法
+• ⾄少會GET.POST兩種動詞
+• 會⽤路由傳遞參數
+• 懂得怎麼轉址</p>
+</blockquote>
+<p><a href="https://hackmd.io/@javck/Bkw0_gqXw#%E8%B2%A0%E8%B2%AC%E7%9A%84%E6%AA%94%E6%A1%88">參考資料</a></p>
+<p><a href="http://blog.tonycube.com/2015/01/laravel-11-route.html">Laravel 學習筆記</a></p>
+<p><a href="https://tony915.gitbooks.io/laravel4/content/begining/routing.html">使用 Route</a></p>
+
+                </div>
+
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    var indexURL = "https://tonytoolsn.github.io/index.json"
+</script>
+
+<!-- JS Plugins --> 
+<script src="https://tonytoolsn.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/search.js"></script>
+ <!-- Main Script --> 
+<script src="https://tonytoolsn.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+            i[r] ||
+            function () {
+                (i[r].q = i[r].q || []).push(arguments);
+            }),
+            (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-183022311-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+    This site uses cookies. By continuing to use this website, you agree to their use.
+    <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+    (function ($) {
+    	const cookieBox = document.getElementById('js-cookie-box');
+    	const cookieButton = document.getElementById('js-cookie-button');
+    	if (!Cookies.get('cookie-box')) {
+    		cookieBox.classList.remove('cookie-box-hide');
+    		cookieButton.onclick = function () {
+    			Cookies.set('cookie-box', true, {
+    				expires:  2 
+    			});
+    			cookieBox.classList.add('cookie-box-hide');
+    		};
+    	}
+    })(jQuery);
+</script>
+
+
+<style>
+    .cookie-box {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        z-index: 9999;
+        padding: 1rem 2rem;
+        background: rgb(71, 71, 71);
+        transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+        color: #fdfdfd;
+    }
+
+    .cookie-box-hide {
+        display: none;
+    }
+</style>
+
+</body>
+</html>

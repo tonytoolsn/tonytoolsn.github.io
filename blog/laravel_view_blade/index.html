@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>Tony&#39;s Blog</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="想知道Laravel專案是怎麼做出美觀的網⾴?秘密就在視圖內!">
+  <meta name="author" content="Tony">
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tonytoolsn.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tonytoolsn.github.io/images/favicon.png " type="image/x-icon">
+
+</head><body> <!-- preloader start -->
+<div class="preloader">
+    
+</div>
+<!-- preloader end --> 
+<!-- navigation -->
+<header class="navigation">
+    <div class="container">
+        
+        
+        <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+            <a class="navbar-brand" href="https://tonytoolsn.github.io">
+                <span class="text-body h3">Tony&#39;s Blog</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+                <i class="ti-menu h3"></i>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navigation">
+                <div class="desktop-view">
+                    <ul class="navbar-nav mr-auto">
+                        
+                        
+                        
+                    </ul>
+                </div>
+
+                <a class="navbar-brand mx-auto desktop-view" href="https://tonytoolsn.github.io"></a>
+
+                <ul class="navbar-nav">
+                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tonytoolsn.github.io/">Home</a>
+                    </li>
+                      
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tonytoolsn.github.io/about">About Me</a>
+                    </li>
+                     
+                </ul>
+
+                 <!-- search -->
+                <div class="search pl-lg-4">
+                    <button id="searchOpen" class="search-btn">
+                        <i class="ti-search"></i>
+                    </button>
+                    <div class="search-wrapper">
+                        <form action="https://tonytoolsn.github.io/search" class="h-100">
+                            <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter..." />
+                        </form>
+                        <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+                    </div>
+                </div>
+                 
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- /navigation -->
+
+
+<section class="section-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center">Laravel-視圖View&amp;Blade</h2>
+                <div class="mb-3 post-meta text-center">
+                    <span>By Tony</span>
+                    
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>15 November 2020</span>
+                    
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>
+                        
+                        <a href="/categories/laravel" class="text-primary">L a r a v e l</a>
+                        
+                    </span>
+                </div>
+                <div class="mt-1" style="border-top: 3px solid #dee2e6; height: 1rem;"></div>
+                
+                <div class="content mb-5">
+                    <h4 id="view與視圖">View與視圖</h4>
+<ul>
+<li>將PHP轉成HTML檔之後傳出</li>
+</ul>
+<h4 id="舊有的php檔案">舊有的PHP檔案</h4>
+<ul>
+<li>沒有Controller</li>
+<li>Model負責資料查詢</li>
+<li>View負責處理HTML</li>
+</ul>
+<h4 id="laravel的view設計">Laravel的View設計</h4>
+<ul>
+<li>負責儲存HTML，並將要顯⽰動態資料的地⽅留出來，等傳⼊後替換</li>
+</ul>
+<h4 id="blade樣板引擎">Blade樣板引擎</h4>
+<ul>
+<li>檔名需為*.blade.php</li>
+<li>編譯成一般PHP</li>
+<li>啟用快取以加快回應速度</li>
+</ul>
+<h4 id="為何有樣板的需求">為何有樣板的需求?</h4>
+<ul>
+<li>每個⾴⾯都會有共同的內容，⽐如選單</li>
+<li>舊有PHP的應對作法</li>
+<li>透過include語法，可以將其他⾴⾯檔案嵌⼊到當前畫⾯內</li>
+</ul>
+<h4 id="那繼續使include不好嗎">那繼續使⽤include不好嗎??</h4>
+<ul>
+<li>單純複製貼上，並無容器的概念</li>
+<li>無法將動態資料傳遞進去，只能顯⽰
+固定內容</li>
+</ul>
+<h4 id="laravel樣板引擎">Laravel樣板引擎</h4>
+<ul>
+<li>
+<p>可傳遞參數</p>
+<p>⽅便傳遞參數並執⾏所有PHP內建函式與Laravel語法</p>
+</li>
+<li>
+<p>⾴⾯加入親屬關係</p>
+<p>繼承變得簡單，重複的部分都移到⽗視圖去，不同的部分才留在⼦視圖</p>
+</li>
+<li>
+<p>Blade導⼊</p>
+<p>採⽤Blade作為引擎</p>
+</li>
+</ul>
+<h4 id="laravel的view設計-1">Laravel的View設計</h4>
+<ul>
+<li>採⽤MVC架構來進⾏設計，View檔案都放在resources/views資料夾內</li>
+<li>所有View的檔案以*.blade.php作為結尾，內容就是⼀般的HTML程式碼加上Blade語法</li>
+</ul>
+<h4 id="回傳view結果">回傳View結果</h4>
+<ul>
+<li>⽤view()這個helper function直接回傳，特別路徑要正確，路徑⽤『 . 』來區隔，不需寫.blade.php</li>
+</ul>
+<pre><code>class UserController extends Controller{
+public function index(){
+//檔案為resources/views/users的index.blade.php
+return view(‘users.index’);
+}
+}
+</code></pre><p>Blade語法</p>
+<p>Blade指令1</p>
+<blockquote>
+<p>@ 開頭
+• 樣板控制@yield . @extends
+• 程式邏輯控制@if . @foreach
+{ 開頭
+• 輸出內容{{ . {!!
+• 註解 {{- -</p>
+</blockquote>
+<p>Blade指令2</p>
+<blockquote>
+<p>挖洞
+@yield(‘{section name}’)</p>
+<p>繼承
+@extends(‘{view name}’)</p>
+<p>包含
+@include(‘{view name}’)</p>
+<p>填洞
+• @section(‘{yield name}’ , ’{ string }’)
+• @section(‘{yield name}’)
+• @stop</p>
+</blockquote>
+<h4 id="blade版配置">⽗Blade版⾯配置</h4>
+<pre><code>&lt;head&gt;
+&lt;title&gt;My Site | @yield(‘title’,’HomePage’)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ @yield(‘content’)
+@include(‘include’,[‘text’=&gt;’master page’])
+@section(‘footerScripts’)
+ &lt;script src=“app.js”&gt;&lt;/script&gt;
+@show
+</code></pre><h4 id="blade版配置-1">⼦Blade版⾯配置</h4>
+<pre><code>@extends(‘layouts.master’)         繼承
+@section(‘title’,’About’)          取代，第⼆參數為預設
+@section(‘content’)                充填
+@endsection
+&lt;div&gt;…&lt;/div&gt;
+@section(‘footerscripts’)
+@endsection
+@parent                            繼承⽗Blade再充填
+&lt;script src=“dashboard.js”&gt;&lt;/script&gt;
+</code></pre><blockquote>
+<p>控制結構</p>
+<p>• @if . @elseif . @else .
+@endif（假如）
+• @unless . @endunless (除⾮)
+• @switch(當)</p>
+<p>邏輯控制</p>
+<p>迴圈 •@for( $i = 0 ; $i&lt;10 ; $++ )
+@endfor
+•@foreach( $tasks as $task )
+@endforeach
+•@forelse
+@empty
+@endforelse
+•@while(條件)
+@endwhile</p>
+</blockquote>
+<h4 id="foreachforelse的loop">foreach/forelse的$loop</h4>
+<p>是⼀個stdClass物件，具有以下特性</p>
+<table>
+<thead>
+<tr>
+<th>index</th>
+<th>項⽬索引，從0開始</th>
+<th>last</th>
+<th>判斷是否為最後⼀個項⽬</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iteration</td>
+<td>項⽬索引，從1開始</td>
+<td>first</td>
+<td>判斷是否為第⼀個項⽬</td>
+</tr>
+<tr>
+<td>remaining</td>
+<td>還剩多少個項⽬</td>
+<td>depth</td>
+<td>迴圈有幾層深</td>
+</tr>
+<tr>
+<td>count</td>
+<td>項⽬數量</td>
+<td>parent</td>
+<td>參考上層迴圈的$loop</td>
+</tr>
+</tbody>
+</table>
+<h4 id="輸出資料">輸出資料</h4>
+<blockquote>
+<p>{{ $string }}
+• 輸出前會做跳脫，安全預設
+• {{ $name ?? ‘Default’ }}</p>
+<p>{!! $html !!}
+輸出不會做跳脫，可⽤於輸出
+HTML或JS</p>
+<p>想要顯⽰{{
+⽤@{{ raw data}}輸出</p>
+<p>不確定是否有值，需要給預設值
+⽤{{ $title ?? ‘Default’ }}</p>
+</blockquote>
+<h4 id="傳送值到多個view">傳送值到多個View</h4>
+<p>全域共⽤變數</p>
+<p>//app/Providers/AppServiceProvider.php</p>
+<p>• 讓你應用程式內的每一個視圖全域共用一個變數
+• 使用view物件的share()函式
+• 需要寫在Provider的boot()方法
+• 可使用預設的AppServiceProvider
+• 8.x版本不需要再加上defaultStringLength(191);</p>
+<p>多視圖共⽤變數</p>
+<p>//app/Providers/AppServiceProvider.php</p>
+<p>• 讓多個視圖共⽤變數
+• 使⽤view物件的composer()函式
+• 可寫在Provider的boot()⽅法
+• 可使⽤預設的AppServiceProvider</p>
+<blockquote>
+<p>View&amp;Blade練習作業
+• ☐嘗試⾃⼰做出電⼦商務⾸⾴的blade視圖，並從Controller回傳
+• ☐優化⾃⼰的blade，把重複部分分離成master.blade.php，以繼承的⽅式改寫
+• ☐練習課程所有提到的Blade指令
+• ☐實驗{{ }} 和{!! !!}}這兩種輸出指令的不同
+• ☐嘗試兩種將值傳到多個View的作法，並思考其使⽤時機</p>
+</blockquote>
+
+                </div>
+
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    var indexURL = "https://tonytoolsn.github.io/index.json"
+</script>
+
+<!-- JS Plugins --> 
+<script src="https://tonytoolsn.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/search.js"></script>
+ <!-- Main Script --> 
+<script src="https://tonytoolsn.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+            i[r] ||
+            function () {
+                (i[r].q = i[r].q || []).push(arguments);
+            }),
+            (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-183022311-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+    This site uses cookies. By continuing to use this website, you agree to their use.
+    <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+    (function ($) {
+    	const cookieBox = document.getElementById('js-cookie-box');
+    	const cookieButton = document.getElementById('js-cookie-button');
+    	if (!Cookies.get('cookie-box')) {
+    		cookieBox.classList.remove('cookie-box-hide');
+    		cookieButton.onclick = function () {
+    			Cookies.set('cookie-box', true, {
+    				expires:  2 
+    			});
+    			cookieBox.classList.add('cookie-box-hide');
+    		};
+    	}
+    })(jQuery);
+</script>
+
+
+<style>
+    .cookie-box {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        z-index: 9999;
+        padding: 1rem 2rem;
+        background: rgb(71, 71, 71);
+        transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+        color: #fdfdfd;
+    }
+
+    .cookie-box-hide {
+        display: none;
+    }
+</style>
+
+</body>
+</html>

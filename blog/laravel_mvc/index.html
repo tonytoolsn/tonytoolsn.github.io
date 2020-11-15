@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技術文章">
+  <meta name="description" content="概念是將應⽤程式拆解成不同的功能區塊，各⾃處理負責事項上，把系統分成三個區塊︐分別為︓Model . View . Controller。">
   <meta name="author" content="Tony">
   <meta name="generator" content="Hugo 0.78.2" />
 
@@ -89,114 +89,102 @@
 <!-- /navigation -->
 
 
-
 <section class="section-sm">
     <div class="container">
         <div class="row">
-            
-            <div class="col-lg-4">
-    
-    <div class="widget">
-        
-        <h4 class="widget-title">About Me</h4>
-        
-        <img src="https://tonytoolsn.github.io/images/author.jpg" alt="" class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4" />
-        
-        <p>Hi, I’m Tony.
-⼀名熱愛學習，喜愛效率，對程式充滿熱情，
-友善交流的⼯程師。</p>
-        <a href="https://tonytoolsn.github.io/about/" class="btn btn-outline-primary">Know More</a>
-        
-    </div>
-    
-    <div class="widget">
-        <h4 class="widget-title">Category</h4>
-        <ul class="list-unstyled">
-            <li><a href="/categories/laravel">Laravel</a></li>
-            <li><a href="/categories/lifestyle">Lifestyle</a></li>
-            <li><a href="/categories/markdowm">Markdowm</a></li>
-        </ul>
-    </div>
-    
-    
-    
-    <div class="widget">
-        <h4 class="widget-title">Social</h4>
-        <ul class="list-inline social-links">
-            
-            <li class="list-inline-item">
-                <a href="https://tonytoolsn.github.io"><i class="ti-github"></i></a>
-            </li>
-            
-        </ul>
-    </div>
-    
-    
-</div>
-
-            
-            <div class="col-lg-8 mb-5 mb-lg-0">
-                <div class="row">
-                     
-                    <div class="col-md-12 mb-4">
-                        <article class="card">
-                            
-                            <div class="card-body px-0">
-                                <a href="https://tonytoolsn.github.io/blog/markdowm_typora/" class="h2 d-block my-3">Markdowm好用編輯器-Typora</a>
-                                <div class="mb-3 post-meta">
-                                    <span>By Tony</span>
-                                    
-                                    <span class="border-bottom border-primary px-2 mx-1"></span>
-                                    <span> 2020-11-15 </span>
-                                    
-                                    <span class="border-bottom border-primary px-2 mx-1"></span>
-                                    <span>
-                                        
-                                        <a href="/categories/markdowm" class="text-primary"
-                                            >Markdowm</a
-                                        >
-                                        
-                                    </span>
-                                </div>
-                                <p class="card-text">Typora 特色是畫面非常簡潔、乾淨，能讓你專注於寫作或編寫程式，具備所見即所得。</p>
-                                <a href="https://tonytoolsn.github.io/blog/markdowm_typora/" class="btn btn-outline-primary">read more</a>
-                            </div>
-                        </article>
-                    </div>
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center">Laravel-MVC設計架構</h2>
+                <div class="mb-3 post-meta text-center">
+                    <span>By Tony</span>
                     
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>15 November 2020</span>
+                    
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>
+                        
+                        <a href="/categories/laravel" class="text-primary">L a r a v e l</a>
+                        
+                    </span>
                 </div>
-            </div>
-
-            
-            <div class="col-12 mt-5">
+                <div class="mt-1" style="border-top: 3px solid #dee2e6; height: 1rem;"></div>
                 
-<ul class="pagination">
-  <li class="page-item">
-    <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/">1</a>
-  </li>
-  <li class="page-item active">
-    <a class="page-link" href="/page/2/">2</a>
-  </li>
-  <li class="page-item disabled">
-    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-  </li>
+                <div class="content mb-5">
+                    <h4 id="什麼是mvc設計架構">什麼是MVC設計架構?</h4>
+<p>在1974年提出，概念是將應⽤程式拆解成不同的功能區塊，各⾃處理負責事項</p>
+<ul>
+<li>四人幫(Gang of Four)並沒有把MVC作為一種設計模式︐而是把它當作”一組用 於建構使用者介面的類集合”︐因為它其實是由三個經典的設計模式組合而成︐ 分別為觀察者模式(Observer) . 策略模式(Strategy)和組合模式(Composite)</li>
+<li>實作上把系統分成三個區塊︐分別為︓Model . View . Controller</li>
 </ul>
+<hr>
+<h4 id="mvc網應流程">MVC網⾴應⽤流程</h4>
+<h6 id="controller控制器">Controller控制器</h6>
+<h6 id="事件層">事件層</h6>
+<ul>
+<li>整個運作過程中的核⼼，掌握與瀏覽器之間的互動⾏為，也負責收 發 Request 與 Response，因此，通常會在 Controller 設置不同 的事件 Event，進⽽觸發不同指令完成後續動作。</li>
+<li>例如：當 Controller 收到請求後，Controller 會通知 Model 調度 資料，接著再把資料傳遞給 View 來產⽣樣板，最終將呈現資料的 HTML ⾴⾯回傳到客⼾端的瀏覽器。</li>
+</ul>
+<hr>
+<h6 id="model模型">Model模型</h6>
+<h6 id="邏輯層">邏輯層</h6>
+<ul>
+<li>資料管理與商業邏輯有關的事項，都交由Model來處理。</li>
+<li>對資料進⾏「新增、修改、刪除、瀏覽」的動作，屬於資料管理。</li>
+<li>電商網站的199免運費、計算訂單總額…等等，屬於商業邏輯。</li>
+</ul>
+<hr>
+<h6 id="view視圖">View視圖</h6>
+<h6 id="表現層">表現層</h6>
+<ul>
+<li>主要管理與使⽤者互動的介⾯，以Web應⽤來說就是HTML樣板，
+若為動態網站，它會依據所傳⼊的資料，呈現出使⽤者所需要的獨
+特內容 。</li>
+</ul>
+<hr>
+<h6 id="mvc設計架構為何變成主流">MVC設計架構為何變成主流?</h6>
+<ul>
+<li>軟體中最常變化的部份，往往是使⽤者操作介⾯ ，使⽤MVC的設計模式，可有效降低使⽤者操作介⾯上的變化對其他部份所造成的衝擊。</li>
+<li>因此各種主流的軟體開發語⾔、⼯具及平臺，都以MVC做為畫分使⽤者操作介⾯及其他組成的架構。</li>
+<li>不論是桌機的使⽤者操作介⾯應⽤程式框架，或是Web-based的網站應⽤程式框架，幾乎都是基於MVC概念的產物。</li>
+</ul>
+<hr>
+<h6 id="優點">優點</h6>
+<ul>
+<li>各組成相互獨⽴ ，單⼀組成具有⾼聚合⼒ ， ⽽不同的組成間耦合⼒低。</li>
+<li>組成內的變化，波及到其他組成的機會相對低，可提⾼重⽤性。</li>
+<li>各組成基於分責原則，可各⾃隸屬於不同專業。</li>
+<li>容易維護與擴展。</li>
+</ul>
+<hr>
+<h6 id="缺點">缺點</h6>
+<ul>
+<li>實作⿇煩，較不適合中⼩等規模。</li>
+<li>增加系統結構的複雜性，運⾏效率降低容易維護與擴展。</li>
+</ul>
+<hr>
+<h6 id="laravel的解決策略">Laravel的解決策略</h6>
+<ul>
+<li>設計出⼀個清楚的資料夾結構，不需使⽤者⾃⼰建立，專案會⾃動⽣成。</li>
+<li>利⽤快取與預編譯等機制來提升效率。</li>
+</ul>
+<hr>
+<h6 id="mvc設計架構實作策略">MVC設計架構實作策略</h6>
+<ul>
+<li>把系統拆解成Model . View . Controller三個區塊︐就能交由不同專業的人來合作開發︐可降低彼此工作的影響︐並提供程式碼的重用性。</li>
+<li>Laravel已經幫你規劃好了︐你只要照著用即可實作出來。</li>
+</ul>
+<hr>
+<p><a href="https://zh.wikipedia.org/zh-tw/MVC">參考資料</a></p>
+<p><a href="https://tony915.gitbooks.io/laravel4/content/begining/laravel_mvc.html">Laravel 的 MVC 模型</a></p>
 
+                </div>
 
+                
+                
             </div>
         </div>
     </div>
 </section>
-
 
 
 
