@@ -16,23 +16,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>HTML</title>
-      <link>https://tonytoolsn.github.io/categories/html/</link>
-      <pubDate>Sun, 10 Nov 2019 10:07:47 +0800</pubDate>
-      
-      <guid>https://tonytoolsn.github.io/categories/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go Language</title>
-      <link>https://tonytoolsn.github.io/categories/go-language/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>https://tonytoolsn.github.io/categories/go-language/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
