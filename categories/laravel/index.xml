@@ -6,7 +6,21 @@
     <description>Recent content in LARAVEL on Tony&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 15 Nov 2020 23:40:00 +0800</lastBuildDate><atom:link href="https://tonytoolsn.github.io/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 08:00:00 +0800</lastBuildDate><atom:link href="https://tonytoolsn.github.io/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laravel-Controller 控制器</title>
+      <link>https://tonytoolsn.github.io/blog/laravel_controller/</link>
+      <pubDate>Mon, 16 Nov 2020 08:00:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/laravel_controller/</guid>
+      <description>控制器Controller 關於Controllers
+都存放於app\Http\Controllers
+可建⽴⼦資料夾
+⽤於協同管理Model.View
+建⽴Controller的指令
+php artisan make:controller Controller名稱 複習關於routes/web.</description>
+    </item>
+    
     <item>
       <title>Laravel-視圖View&amp;Blade</title>
       <link>https://tonytoolsn.github.io/blog/laravel_view_blade/</link>

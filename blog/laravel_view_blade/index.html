@@ -299,6 +299,138 @@ HTML或JS</p>
 • ☐實驗{{ }} 和{!! !!}}這兩種輸出指令的不同
 • ☐嘗試兩種將值傳到多個View的作法，並思考其使⽤時機</p>
 </blockquote>
+<hr>
+<h4 id="blade指令">Blade指令</h4>
+<p><strong>樣板控制</strong></p>
+<pre><code>@yield(‘{section name}’)
+
+@section(‘{section name}’)
+    &lt;div&gt;可以選擇性繼承的內容&lt;/div&gt;
+@show
+</code></pre><p><strong>填洞</strong></p>
+<pre><code>填單一內容使用
+@section(‘{yield name}’ , ’{ string }’)
+
+填複雜內容使用
+@section(‘{yield name}’)
+@stop
+
+包含 
+@include(‘{view name}’,['key1'=&gt;'value1','key2'=&gt;'value2'])
+
+繼承，通常寫在子視圖的頭 
+@extends(‘{view name}’)
+</code></pre><p><strong>程式邏輯控制 Comment</strong></p>
+<p><strong>條件判斷式</strong></p>
+<pre><code>假如
+@if
+@elseif
+@else 
+@endif
+
+除非
+@unless 
+@endunless
+
+當
+@switch
+
+@endswitch
+</code></pre><p><strong>迴圈</strong></p>
+<pre><code>@foreach( $tasks as $task ) 
+    逐一取出陣列的內容來加以處理
+@endforeach
+
+@for( $i = 0 ; $i&lt;10 ; $++ ) 
+
+@endfor
+
+@forelse( $tasks as $task )
+
+@empty 
+    目前沒有工作
+@endforelse
+
+@while
+
+@endwhile
+</code></pre><p><strong>隱含變數 $loop</strong></p>
+<p>$loop-&gt;index 索引值，從0開始
+$loop-&gt;iteration 第幾個，從1開始
+$loop-&gt;remaining 還剩幾個
+$loop-&gt;count 總共幾個
+$loop-&gt;last 是否為最後
+$loop-&gt;first 是否為第一</p>
+<p><strong>輸出內容</strong></p>
+<p>{{ 內容遇到程式碼會當純文字處理 }}
+{!! 內容遇到程式碼會渲染並執行 !!}
+{{- - 註解 &ndash;}}
+@{{ 顯示Blade語法 }}</p>
+<p><strong>課程範例</strong></p>
+<pre><code>//resources/views/master.blade.php
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;
+    @yield('title')
+    &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    @yield('content')
+    
+    
+    @section('js')
+        &lt;script src=&quot;js/1.js&quot; /&gt;
+    @show
+    &lt;p&gt;js結束&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+//resources/views/index.blade.php
+@extends('layouts.master')
+
+
+@section('js')
+    &lt;script src=&quot;2.js&quot; /&gt;
+    @parent
+@stop
+
+@section('title','首頁')
+    
+@section('content')
+&lt;div class=&quot;container clearfix&quot;&gt;
+    我的內容
+&lt;/div&gt;
+
+ @foreach ($data as $tmp)
+     &lt;h2&gt;{{ $tmp }}&lt;/h2&gt;
+     &lt;h3&gt;{{ $loop-&gt;index }} &lt;/h3&gt;
+ @endforeach
+@stop
+
+
+//routes/web.php
+Route::get('/index','HomeController@index');
+
+//app/Http/Controllers/HomeController.php
+public function index()
+{
+    return view('index');
+}
+</code></pre><p><strong>多視圖共享</strong></p>
+<pre><code>//全域共享
+view()-&gt;share('tel','0212345678');
+
+//部分共享
+view()-&gt;composer(['items.*'],function($view){
+    $view-&gt;with('address','中山路一號');
+});
+</code></pre><p><a href="https://laravel.tw/docs/5.2/views">參考資料</a></p>
 
                 </div>
 

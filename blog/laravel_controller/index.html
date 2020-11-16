@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技術文章">
+  <meta name="description" content="Laravel如何把PHP變優美? ⼀切謎團都在Controller之內! ">
   <meta name="author" content="Tony">
   <meta name="generator" content="Hugo 0.78.2" />
 
@@ -89,140 +89,105 @@
 <!-- /navigation -->
 
 
-
 <section class="section-sm">
     <div class="container">
         <div class="row">
-            
-            <div class="col-lg-4">
-    
-    <div class="widget">
-        
-        <h4 class="widget-title">About Me</h4>
-        
-        <img src="https://tonytoolsn.github.io/images/author.jpg" alt="" class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4" />
-        
-        <p>Hi, I’m Tony.
-⼀名熱愛學習，喜愛效率，對程式充滿熱情，
-友善交流的⼯程師。</p>
-        <a href="https://tonytoolsn.github.io/about/" class="btn btn-outline-primary">Know More</a>
-        
-    </div>
-    
-    <div class="widget">
-        <h4 class="widget-title">Category</h4>
-        <ul class="list-unstyled">
-            <li><a href="/categories/laravel">Laravel</a></li>
-            <li><a href="/categories/lifestyle">Lifestyle</a></li>
-            <li><a href="/categories/markdowm">Markdowm</a></li>
-        </ul>
-    </div>
-    
-    
-    
-    <div class="widget">
-        <h4 class="widget-title">Social</h4>
-        <ul class="list-inline social-links">
-            
-            <li class="list-inline-item">
-                <a href="https://github.com/tonytoolsn"><i class="ti-github"></i></a>
-            </li>
-            
-        </ul>
-    </div>
-    
-    
-</div>
-
-            
-            <div class="col-lg-8 mb-5 mb-lg-0">
-                <div class="row">
-                     
-                    <div class="col-md-12 mb-4">
-                        <article class="card">
-                            
-                            <div class="card-body px-0">
-                                <a href="https://tonytoolsn.github.io/blog/markdowm_language/" class="h2 d-block my-3">Markdowm基本語法</a>
-                                <div class="mb-3 post-meta">
-                                    <span>By Tony</span>
-                                    
-                                    <span class="border-bottom border-primary px-2 mx-1"></span>
-                                    <span> 2020-11-15 </span>
-                                    
-                                    <span class="border-bottom border-primary px-2 mx-1"></span>
-                                    <span>
-                                        
-                                        <a href="/categories/markdowm" class="text-primary"
-                                            >Markdowm</a
-                                        >
-                                        
-                                    </span>
-                                </div>
-                                <p class="card-text">Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文字格式撰寫檔案。</p>
-                                <a href="https://tonytoolsn.github.io/blog/markdowm_language/" class="btn btn-outline-primary">read more</a>
-                            </div>
-                        </article>
-                    </div>
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center">Laravel-Controller 控制器</h2>
+                <div class="mb-3 post-meta text-center">
+                    <span>By Tony</span>
                     
-                    <div class="col-md-12 mb-4">
-                        <article class="card">
-                            
-                            <div class="card-body px-0">
-                                <a href="https://tonytoolsn.github.io/blog/markdowm_typora/" class="h2 d-block my-3">Markdowm好用編輯器-Typora</a>
-                                <div class="mb-3 post-meta">
-                                    <span>By Tony</span>
-                                    
-                                    <span class="border-bottom border-primary px-2 mx-1"></span>
-                                    <span> 2020-11-15 </span>
-                                    
-                                    <span class="border-bottom border-primary px-2 mx-1"></span>
-                                    <span>
-                                        
-                                        <a href="/categories/markdowm" class="text-primary"
-                                            >Markdowm</a
-                                        >
-                                        
-                                    </span>
-                                </div>
-                                <p class="card-text">Typora 特色是畫面非常簡潔、乾淨，能讓你專注於寫作或編寫程式，具備所見即所得。</p>
-                                <a href="https://tonytoolsn.github.io/blog/markdowm_typora/" class="btn btn-outline-primary">read more</a>
-                            </div>
-                        </article>
-                    </div>
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>16 November 2020</span>
                     
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>
+                        
+                        <a href="/categories/laravel" class="text-primary">L a r a v e l</a>
+                        
+                    </span>
                 </div>
-            </div>
-
-            
-            <div class="col-12 mt-5">
+                <div class="mt-1" style="border-top: 3px solid #dee2e6; height: 1rem;"></div>
                 
-<ul class="pagination">
-  <li class="page-item">
-    <a href="/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/">1</a>
-  </li>
-  <li class="page-item active">
-    <a class="page-link" href="/page/2/">2</a>
-  </li>
-  <li class="page-item disabled">
-    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-  </li>
-</ul>
+                <div class="content mb-5">
+                    <h2 id="控制器controller">控制器Controller</h2>
+<p><strong>關於Controllers</strong></p>
+<p>都存放於<strong>app\Http\Controllers</strong></p>
+<p>可建⽴⼦資料夾</p>
+<p>⽤於協同管理Model.View</p>
+<p>建⽴Controller的指令</p>
+<pre><code>php artisan make:controller Controller名稱
+</code></pre><hr>
+<h4 id="複習關於routeswebphp">複習關於routes/web.php</h4>
+<p>負責定義網⾴請求路由的⼯作</p>
+<p>格式：Route::get(&lsquo;contact&rsquo;, ‘App\Http\Controllers\WelcomeController@contact’);</p>
+<p>//請求⽅法   偵聽URL路徑   負責的Controller    接⼿的⽅法</p>
+<p>• 可使⽤.來對應到⼦資料夾
+• 規則判定由上⾄下逐⼀比對，只要符合路徑就傳遞給控制器
+• 8.x版本的控制器因前綴預設為空，所以需要補上命名空間</p>
+<hr>
+<h4 id="為什麼8x以前不需要寫">為什麼8.x以前不需要寫</h4>
+<p><strong>App\Http\Controllers?</strong></p>
+<p>因為RouteServiceProvider.php設定了此命
+名空間，但8.x開始預設為null</p>
+<hr>
+<h4 id="複習新增controller的細節">複習新增Controller的細節</h4>
+<p>建⽴⼀個不帶⽅法的Controller</p>
+<p>php artisan make:controller Controller名稱</p>
+<hr>
+<h4 id="關於view">關於View</h4>
+<p>負責畫⾯的呈現描述，位於resources/views</p>
+<pre><code>public function about(){
+return view('about');
+}
+</code></pre><hr>
+<h4 id="將視圖放在資料夾">將視圖放在⼦資料夾</h4>
+<p>如想將視圖檔⽤⼦資料夾分類，可使⽤.語法</p>
+<pre><code>public function about(){
+return view(‘pages.about’);
+//回傳pages⼦資料夾的about.blade.php
+}
+</code></pre><hr>
+<h4 id="view的內容">View的內容</h4>
+<p>• 內容包含html與Blade標籤
+• 檔名中⼀定包含blade
+• 例如:game.blade.php</p>
+<hr>
+<h4 id="透過controller傳值">透過Controller傳值</h4>
+<p>• 新增變數並賦值
+• 傳送語法以下三種
+• <strong>with</strong>函數
+• view函式第⼆參數
+• <strong>compact</strong>函數</p>
+<pre><code>//PagesController.php
 
+namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+clsaa PagesController extends Controller
+{
+    public function about()
+    {
+    $name = 'boy';
+    
+    return view('pages.about', compact('name'));
+    
+    return view('pages.about')-&gt;with('name',$name);
+    }
+}
+</code></pre><hr>
+<h4 id="透過controller傳多筆數值">透過Controller傳多筆數值</h4>
+
+                </div>
+
+                
+                
             </div>
         </div>
     </div>
 </section>
-
 
 
 
