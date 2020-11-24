@@ -4,31 +4,51 @@
   
   <url>
     <loc>https://tonytoolsn.github.io/categories/</loc>
-    <lastmod>2020-11-16T08:00:00+08:00</lastmod>
+    <lastmod>2020-11-18T08:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tonytoolsn.github.io/blog/laravel_git/</loc>
+    <lastmod>2020-11-18T08:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://tonytoolsn.github.io/tags/laravel/</loc>
-    <lastmod>2020-11-16T08:00:00+08:00</lastmod>
+    <lastmod>2020-11-18T08:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://tonytoolsn.github.io/categories/laravel/</loc>
+    <lastmod>2020-11-18T08:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tonytoolsn.github.io/tags/</loc>
+    <lastmod>2020-11-18T08:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tonytoolsn.github.io/</loc>
+    <lastmod>2020-11-18T08:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tonytoolsn.github.io/tags/jquery/</loc>
+    <lastmod>2020-11-16T08:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tonytoolsn.github.io/categories/jquery/</loc>
+    <lastmod>2020-11-16T08:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tonytoolsn.github.io/blog/jquery_basic/</loc>
     <lastmod>2020-11-16T08:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://tonytoolsn.github.io/blog/laravel_controller/</loc>
-    <lastmod>2020-11-16T08:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tonytoolsn.github.io/tags/</loc>
-    <lastmod>2020-11-16T08:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tonytoolsn.github.io/</loc>
     <lastmod>2020-11-16T08:00:00+08:00</lastmod>
   </url>
   
@@ -59,6 +79,16 @@
   
   <url>
     <loc>https://tonytoolsn.github.io/blog/lifestyle_article/</loc>
+    <lastmod>2020-11-15T13:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tonytoolsn.github.io/blog/lifestyle_static_pages/</loc>
+    <lastmod>2020-11-15T13:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tonytoolsn.github.io/blog/lifestyle_url/</loc>
     <lastmod>2020-11-15T13:00:00+08:00</lastmod>
   </url>
   

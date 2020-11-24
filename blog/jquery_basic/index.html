@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>Tony&#39;s Blog</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="jQuery是最受歡迎的JavaScript函式庫之一">
+  <meta name="author" content="Tony">
+  <meta name="generator" content="Hugo 0.78.2" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tonytoolsn.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tonytoolsn.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tonytoolsn.github.io/images/favicon.png " type="image/x-icon">
+
+</head><body> <!-- preloader start -->
+<div class="preloader">
+    
+</div>
+<!-- preloader end --> 
+<!-- navigation -->
+<header class="navigation">
+    <div class="container">
+        
+        
+        <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+            <a class="navbar-brand" href="https://tonytoolsn.github.io">
+                <span class="text-body h3">Tony&#39;s Blog</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+                <i class="ti-menu h3"></i>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navigation">
+                <div class="desktop-view">
+                    <ul class="navbar-nav mr-auto">
+                        
+                        
+                        
+                    </ul>
+                </div>
+
+                <a class="navbar-brand mx-auto desktop-view" href="https://tonytoolsn.github.io"></a>
+
+                <ul class="navbar-nav">
+                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tonytoolsn.github.io/">Home</a>
+                    </li>
+                      
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tonytoolsn.github.io/about">About Me</a>
+                    </li>
+                     
+                </ul>
+
+                 <!-- search -->
+                <div class="search pl-lg-4">
+                    <button id="searchOpen" class="search-btn">
+                        <i class="ti-search"></i>
+                    </button>
+                    <div class="search-wrapper">
+                        <form action="https://tonytoolsn.github.io/search" class="h-100">
+                            <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter..." />
+                        </form>
+                        <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+                    </div>
+                </div>
+                 
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- /navigation -->
+
+
+<section class="section-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center">jquery基本入門</h2>
+                <div class="mb-3 post-meta text-center">
+                    <span>By Tony</span>
+                    
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>16 November 2020</span>
+                    
+                    <span class="border-bottom border-primary px-2 mx-1"></span>
+                    <span>
+                        
+                        <a href="/categories/jquery" class="text-primary">J q u e r y</a>
+                        
+                    </span>
+                </div>
+                <div class="mt-1" style="border-top: 3px solid #dee2e6; height: 1rem;"></div>
+                
+                <div class="content mb-5">
+                    <h4 id="jquery-基本概念">jQuery 基本概念</h4>
+<blockquote>
+<p>學習⽬標：學會如何使⽤ jQuery，掌握 jQuery 的常⽤ api，能夠使⽤ jQuery 實現常⾒的效果。</p>
+</blockquote>
+<p>1.1 為什麼要學習 jQuery?</p>
+<p>【01-讓div 顯⽰與設置內容.html】</p>
+<p>使⽤ javascript 開發過程中，有許多的缺點：</p>
+<pre><code>1. 查找元素的⽅法太少，⿇煩。 
+2. 遍歷偽陣列很⿇煩，通常要嵌套⼀⼤堆的for迴圈。 
+3. 有相容性問題。
+4. 想要實現簡單的動畫效果，也很⿇煩 
+5. 代碼冗餘。
+</code></pre><hr>
+<p>1.2 jQuery 初體驗</p>
+<p>【02-讓div顯⽰與設置內容.html】</p>
+<pre><code>&lt;script&gt;
+$(document).ready(function () {
+ $(&quot;#btn1&quot;).click(function () {
+ //隱式反覆運算：偷偷的遍歷，在jQuery中，不需要⼿動寫for迴圈了，會⾃動進⾏遍歷。
+ $(&quot;div&quot;).show(200);
+ });
+ $(&quot;#btn2&quot;).click(function () {
+ $(&quot;div&quot;).text(&quot;我是內容&quot;);
+ });
+});
+&lt;/script&gt;
+</code></pre><p>優點總結：</p>
+<pre><code>1. 查找元素的⽅法多種多樣，非常靈活
+2. 擁有隱式反覆運算特性，因此不再需要⼿寫for迴圈了。
+3. 完全沒有相容性問題。
+4. 實現動畫非常簡單，⽽且功能更加的強⼤。
+5. 代碼簡單、粗暴。
+</code></pre><hr>
+<p>1.3 什麼是 jQuery?</p>
+<blockquote>
+<p>jQuery的官網 <a href="http://jquery.com/">http://jquery.com/</a> jQuery就是⼀個js庫，使⽤jQuery的話，會比使⽤JavaScript更簡單。</p>
+</blockquote>
+<p>js庫：把⼀些常⽤到的⽅法寫到⼀個單獨的js檔，使⽤的時候直接去引⽤這js檔就可以了。（animate.js、 common.js）</p>
+<p>我們知道了，jQuery其實就是⼀個js檔，裡⾯封裝了⼀⼤堆的⽅法⽅便我們的開發，其實就是⼀個加強版的 common.js，因此我們學習jQuery，其實就是學習jQuery這個js檔中封裝的⼀⼤堆⽅法。</p>
+<hr>
+<p>1.4 jQuery 的版本</p>
+<blockquote>
+<p>官網下載地址：http://jquery.com/download/ jQuery版本有很多，分為 1.x 2.x 3.x</p>
+</blockquote>
+<p>⼤版本分類：</p>
+<pre><code>1.x 版本：能夠相容IE678流覽器
+2.x 版本：不相容IE678流覽器
+1.x 和 2.x 版本 `jquery` 都不再更新版本了，現在只更新 `3.x` 版本。
+3.x 版本：不相容 IE678，更加的精簡（在國內不流⾏，因為國內使⽤jQuery的主要⽬的就是相容
+IE678）
+</code></pre><p>關於壓縮版和未壓縮版</p>
+<pre><code>jquery-1.12.4.min.js:壓縮版本，適⽤於⽣產環境，因為檔比較⼩，去除了注釋、換⾏、空格等東
+⻄，但是基本沒有顆閱讀性。
+jquery-1.12.4.js:未壓縮版本，適⽤于學習與開發環境，源碼清晰，易閱讀。
+</code></pre><hr>
+<p>1.5 jQuery 的入⼝函數</p>
+<p>使⽤jQuery的三個步驟：</p>
+<pre><code>1. 引入 `jQuery` 文件
+2. 入⼝函數
+3. 功能實現
+</code></pre><p>關於jQuery的入⼝函數：</p>
+<pre><code>//第⼀種寫法
+$(document).ready(function() {
+});
+//第⼆種寫法
+$(function() {
+});
+</code></pre><p>jQuery入⼝函數與js入⼝函數的對比</p>
+<pre><code>1. JavaScript的入⼝函數要等到⾴⾯中所有資源（包括圖片、檔案）載入完成才開始執⾏。
+2. jQuery的入⼝函數只會等待文檔樹載入完成就開始執⾏，並不會等待圖片、檔的載入。
+</code></pre><hr>
+<p>1.6 jQuery 物件與 DOM 物件的區別（重點）</p>
+<pre><code>1. DOM 對象：使⽤ JavaScript 中的⽅法獲取⾴⾯中的元素返回的物件就是 dom 物件。
+2. jQuery 對象：jquery 物件就是使⽤jquery的⽅法獲取⾴⾯中的元素返回的物件就是 jQuery 物
+件。
+3. jQuery 物件其實就是 DOM 物件的包裝集（包裝了DOM 物件的集合（偽陣列））
+4. DOM物件與jQuery物件的⽅法不能混⽤。
+</code></pre><p>DOM 物件轉換成 jQuery 物件：【聯想記憶：花錢】</p>
+<pre><code>var $obj = $(domObj);
+// $(document).ready(function(){});就是典型的DOM物件轉jQuery物件
+</code></pre><p>jQuery 物件轉換成 DOM 物件：</p>
+<pre><code>var $li = $(&quot;li&quot;);
+//第⼀種⽅法（推薦使⽤）
+$li[0]
+//第⼆種⽅法
+$li.get(0)
+</code></pre><hr>
+<ol>
+<li>7$ 符號的實質</li>
+</ol>
+<ul>
+<li>$ 符號代表是什麼 ?</li>
+</ul>
+<pre><code>$(function () {
+});
+console.log(typeof $);
+</code></pre><ul>
+<li>結果 function</li>
+</ul>
+<pre><code>$ 其實就是⼀個函數，以後⽤$的時候，記得跟⼩括弧 $(); 這函式能作什麼，依參數不同，功能就不同， 有 3 種功能。
+
+1. 入⼝函式。
+2. 把 dom 物件轉換成 jquery 物件。
+3. ⽤來找物件。
+</code></pre><ul>
+<li>參數不同，功能就不同，3 種⽤法</li>
+</ul>
+<ol>
+<li>參數是⼀個 function, 入⼝函數</li>
+</ol>
+<pre><code>$(function(){
+});
+</code></pre><ol start="2">
+<li>參數可以是⼀個 DOM 對象, 把 DOM 物件轉換成 jquery 物件</li>
+</ol>
+<pre><code>$(document).ready(function () {
+});
+&gt;$(document) 把 `DOM` 的 `document` 物件轉換成 `jQ` 對象, 所以就可⽤ `jQ`
+的 `ready()` ⽅法。
+</code></pre><ol start="3">
+<li>參數是⼀個字串(有⼀定格式),⽤來找物件。</li>
+</ol>
+<pre><code>$(&quot;div&quot;); $(&quot;div ul&quot;); $(&quot;.current&quot;);
+</code></pre><hr>
+<h4 id="2選擇器">2.選擇器</h4>
+<p>2.1 什麼是 jQuery 選擇器</p>
+<p><strong>jQuery</strong> 選擇器是 <strong>jQuery</strong> 為我們提供的⼀組⽅法，讓我們更加⽅便的獲取到⾴⾯中的元素。注意：<strong>jQuery</strong> 選 擇器返回的是 <strong>jQuery</strong> 物件。</p>
+<p><strong>jQuery</strong> 選擇器有很多，基本相容了 CSS1 到CSS3 所有的選擇器，並且 <strong>jQuery</strong> 還添加了很多更加複雜的選擇 器。【查看 jQuery 文檔】</p>
+<p><strong>jQuery</strong> 選擇器雖然很多，但是選擇器之間可以相互替代，就是說獲取⼀個元素，你會有很多種⽅法獲取到。所 以我們平時真正能⽤到的只是少數的最常⽤的選擇器。</p>
+<blockquote>
+<p>找 jQuery 對象與有許多⽅法。</p>
+</blockquote>
+<hr>
+<p>2.2 基本選擇器</p>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>⽤法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID選擇器</td>
+<td>$(&quot;#id&quot;);</td>
+<td>獲取指定ID的元素</td>
+</tr>
+<tr>
+<td>類別選取器</td>
+<td>$(&quot;.class&quot;);</td>
+<td>獲取同⼀類class的元素</td>
+</tr>
+<tr>
+<td>標籤選擇器</td>
+<td>$(&ldquo;div&rdquo;);</td>
+<td>獲取同⼀類標籤的所有元素</td>
+</tr>
+<tr>
+<td>聯集選擇器</td>
+<td>$(&ldquo;div,p,li&rdquo;);</td>
+<td>使⽤逗號分隔，只要符合條件之⼀就可。</td>
+</tr>
+<tr>
+<td>交集選擇器</td>
+<td>$(&ldquo;div.redClass&rdquo;);</td>
+<td>獲取class為redClass的div元素</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>總結：跟 css 的選擇器⽤法⼀模⼀樣。</p>
+</blockquote>
+<hr>
+<p>2.3 層級選擇器</p>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>⽤法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⼦代選擇器</td>
+<td>$(&ldquo;ul&gt;li&rdquo;);</td>
+<td>使⽤ &gt; 號，獲取兒⼦層級的元素，注意，並不會獲取孫⼦層級的元素</td>
+</tr>
+<tr>
+<td>後代選擇器</td>
+<td>$(&ldquo;ul li&rdquo;);</td>
+<td>使⽤空格， 代表後代選擇器，獲取 ul 下的所有 li 元素，包括孫⼦等</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>跟 CSS 的選擇器⼀模⼀樣。</p>
+</blockquote>
+<hr>
+<p>2.4 過濾選擇器</p>
+<blockquote>
+<p>這類別選取器都帶冒號:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>⽤法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:eq（index）</td>
+<td>$(&ldquo;li:eq(2)&quot;).css(&ldquo;color&rdquo;, &ldquo;red&rdquo;);</td>
+<td>獲取到的li元素中，選擇索引號為2的元素，索引號index從0 開始。</td>
+</tr>
+<tr>
+<td>:odd</td>
+<td>$(&ldquo;li:odd&rdquo;).css(&ldquo;color&rdquo;, &ldquo;red&rdquo;);</td>
+<td>獲取到的li元素中，選擇索引號為奇數的元素</td>
+</tr>
+<tr>
+<td>:even</td>
+<td>$(&ldquo;li:even&rdquo;).css(&ldquo;color&rdquo;, &ldquo;red&rdquo;);</td>
+<td>獲取到的li元素中，選擇索引號為偶數的元素</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>2.5 篩選選擇器(⽅法)</p>
+<blockquote>
+<p>篩選選擇器的功能與過濾選擇器有點類似，但是⽤法不⼀樣，篩選選擇器主要是⽅法。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>⽤法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>children(selector)</td>
+<td>$(&ldquo;ul&rdquo;).children(&ldquo;li&rdquo;);</td>
+<td>相當於$(&ldquo;ul&gt;li&rdquo;)，⼦類別選取器</td>
+</tr>
+<tr>
+<td>find(selector)</td>
+<td>$(&ldquo;ul&rdquo;).find(&ldquo;li&rdquo;);</td>
+<td>相當於$(&ldquo;ul li&rdquo;),後代選擇器</td>
+</tr>
+<tr>
+<td>siblings(selector)</td>
+<td>$(&quot;#first&rdquo;).siblings(&ldquo;li&rdquo;);</td>
+<td>查找兄弟節點，不包括⾃⼰本⾝。</td>
+</tr>
+<tr>
+<td>parent()</td>
+<td>$(&quot;#first&quot;).parent();</td>
+<td>查找⽗親</td>
+</tr>
+<tr>
+<td>eq(index)</td>
+<td>$(&ldquo;li&rdquo;).eq(2);</td>
+<td>相當於$(&ldquo;li:eq(2)&quot;),index從0開始</td>
+</tr>
+<tr>
+<td>next()</td>
+<td>$(&ldquo;li&rdquo;).next();</td>
+<td>找下⼀個兄弟</td>
+</tr>
+<tr>
+<td>prev()</td>
+<td>$(&ldquo;li&rdquo;).prev();</td>
+<td>找上⼀次兄弟</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://www.w3school.com.cn/jquery/index.asp">w3school</a></p>
+<p><a href="https://www.runoob.com/jquery/jquery-tutorial.html">菜鳥教程</a></p>
+
+                </div>
+
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    var indexURL = "https://tonytoolsn.github.io/index.json"
+</script>
+
+<!-- JS Plugins --> 
+<script src="https://tonytoolsn.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tonytoolsn.github.io/plugins/search/search.js"></script>
+ <!-- Main Script --> 
+<script src="https://tonytoolsn.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+            i[r] ||
+            function () {
+                (i[r].q = i[r].q || []).push(arguments);
+            }),
+            (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-183022311-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+    This site uses cookies. By continuing to use this website, you agree to their use.
+    <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+    (function ($) {
+    	const cookieBox = document.getElementById('js-cookie-box');
+    	const cookieButton = document.getElementById('js-cookie-button');
+    	if (!Cookies.get('cookie-box')) {
+    		cookieBox.classList.remove('cookie-box-hide');
+    		cookieButton.onclick = function () {
+    			Cookies.set('cookie-box', true, {
+    				expires:  2 
+    			});
+    			cookieBox.classList.add('cookie-box-hide');
+    		};
+    	}
+    })(jQuery);
+</script>
+
+
+<style>
+    .cookie-box {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        z-index: 9999;
+        padding: 1rem 2rem;
+        background: rgb(71, 71, 71);
+        transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+        color: #fdfdfd;
+    }
+
+    .cookie-box-hide {
+        display: none;
+    }
+</style>
+
+</body>
+</html>

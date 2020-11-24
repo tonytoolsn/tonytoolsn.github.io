@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JQUERY on Tony&#39;s Blog</title>
+    <link>https://tonytoolsn.github.io/tags/jquery/</link>
+    <description>Recent content in JQUERY on Tony&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 16 Nov 2020 08:00:00 +0800</lastBuildDate><atom:link href="https://tonytoolsn.github.io/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jquery基本入門</title>
+      <link>https://tonytoolsn.github.io/blog/jquery_basic/</link>
+      <pubDate>Mon, 16 Nov 2020 08:00:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/jquery_basic/</guid>
+      <description>jQuery 基本概念  學習⽬標：學會如何使⽤ jQuery，掌握 jQuery 的常⽤ api，能夠使⽤ jQuery 實現常⾒的效果。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -16,5 +16,24 @@
       <description>撰寫部落格流程 選擇題材 -&amp;gt; 蒐集資料 -&amp;gt; 段落大綱 -&amp;gt; 文章段落 -&amp;gt; 檢查編輯 -&amp;gt;分享出去</description>
     </item>
     
+    <item>
+      <title>免費放置靜態網頁至雲端方法</title>
+      <link>https://tonytoolsn.github.io/blog/lifestyle_static_pages/</link>
+      <pubDate>Sun, 15 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/lifestyle_static_pages/</guid>
+      <description>網頁檔案到 Google Drive 雲端空間 設定 Google Drive 資料夾分享權限 加入及設定 DriveToWeb 服務 一、產生網站的網址</description>
+    </item>
+    
+    <item>
+      <title>常用連結紀錄</title>
+      <link>https://tonytoolsn.github.io/blog/lifestyle_url/</link>
+      <pubDate>Sun, 15 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/lifestyle_url/</guid>
+      <description>jquery
+FullCalendar - 滿版行事曆</description>
+    </item>
+    
   </channel>
 </rss>

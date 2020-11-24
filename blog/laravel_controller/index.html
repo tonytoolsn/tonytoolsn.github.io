@@ -171,14 +171,278 @@ clsaa PagesController extends Controller
     public function about()
     {
     $name = 'boy';
-    
+    //compact函數
     return view('pages.about', compact('name'));
-    
+    //with函數
     return view('pages.about')-&gt;with('name',$name);
     }
 }
 </code></pre><hr>
 <h4 id="透過controller傳多筆數值">透過Controller傳多筆數值</h4>
+<pre><code>class PagesController extends Controller
+{
+$name = 'Pony &lt;span style=&quot;color:red&quot;&gt;兒&lt;/span&gt;';
+
+return view('pages.about',compact('name'));
+
+//with函數
+return view('pages.about')-&gt;with([
+&quot;first&quot; =&gt; &quot;p&quot;;
+&quot;last&quot; =&gt; &quot;ony&quot;;
+]);
+
+//view函式第⼆參數
+$data = [];
+$data[&quot;first&quot;] = &quot;p&quot;;
+$data[&quot;last&quot;] = &quot;ony&quot;;
+return view(&quot;pages&quot;,$data);
+
+//compact函數
+$first = &quot;p&quot;;
+$last = &quot;ony&quot;;
+return view('pages.about',compact(&quot;first&quot;,&quot;last&quot;));
+}
+</code></pre><hr>
+<h4 id="view接收controller的-傳值">View接收Controller的 傳值</h4>
+<p><strong>• 接收語法以下兩種</strong></p>
+<p><strong>• {{ $name }}</strong></p>
+<p><strong>• {!! $name !!}</strong></p>
+<pre><code>//about.blade.php
+//{{ }} 內容顯示都為文字
+//{!! !}針對內容有Html需要呈現時⽤
+
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;標題:{{$first}}&lt;/h1&gt;
+&lt;p&gt;文章內容:{!!$last!!}&lt;/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><strong>View接收多筆數值</strong></p>
+<pre><code>//about.blade.php
+//針對內容有Html需要呈現時⽤
+
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;標題:{{$first}}{{$last}}&lt;/h1&gt;
+&lt;p&gt;文章內容:&lt;/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><hr>
+<h4 id="控制器傳值範">控制器傳值⽰範</h4>
+<p><strong>Resources Controller</strong></p>
+<p>複習新增Controller的細節</p>
+<p>建⽴⼀個帶<strong>CRUD⽅法的Controller</strong></p>
+<p><strong>php artisan make:controller Controller名稱- -resource - -model=模型名</strong></p>
+<pre><code>//路由規則設定
+
+Route::resource('photos', ‘PhotoController'); 
+
+Route::resources([
+ 'photos' =&gt; 'PhotoController',
+ 'posts' =&gt; 'PostController'
+]);
+</code></pre><hr>
+<h4 id="被資源控制器所處理的actions">被資源控制器所處理的Actions</h4>
+<table>
+<thead>
+<tr>
+<th>動詞</th>
+<th>路徑</th>
+<th>Action</th>
+<th>路由名稱</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/photos</td>
+<td>index</td>
+<td>photos.index</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/photos/create</td>
+<td>create</td>
+<td>photos.create</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/photos</td>
+<td>store</td>
+<td>photos.store</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/photos/{photo}</td>
+<td>show</td>
+<td>photos.show</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/photos/{photo}/edit</td>
+<td>edit</td>
+<td>photos.edit</td>
+</tr>
+<tr>
+<td>PUT/PATCH</td>
+<td>/photos/{photo}</td>
+<td>update</td>
+<td>photos.update</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/photos/{photo}</td>
+<td>destroy</td>
+<td>photos.destroy</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="資源控制器路由範">資源控制器路由⽰範</h4>
+<p><strong>新增API的Controller的細節</strong></p>
+<p>建⽴⼀個帶CRUD⽅法的Controller，但不包含create和edit</p>
+<p>php artisan make:controller APIController名稱- -api</p>
+<pre><code>//路由規則設定
+
+Route::apiResource('photos', 'PhotoController');
+
+Route::apiResources([
+ 'photos' =&gt; 'PhotoController',
+ 'posts' =&gt; 'PostController'
+]);
+</code></pre><hr>
+<h4 id="controller-進階技巧">Controller 進階技巧</h4>
+<p><strong>加入中介層</strong></p>
+<pre><code>//控制器可在建構⼦宣告哪些Action要加⼊
+
+class UserController extends Controller
+{
+ public function __construct()
+ {
+ $this-&gt;middleware('auth');
+ $this-&gt;middleware('log')-&gt;only('index');
+ $this-&gt;middleware('subscribed')-&gt;except('store');
+ }
+}
+</code></pre><pre><code>//路由可在規則後⾯加⼊中介層
+
+Route::get(‘profile','UserController
+@show')
+-&gt;middleware('auth');
+</code></pre><hr>
+<h4 id="如何讓控制器的action需要登入才能訪問">如何讓控制器的Action需要登入才能訪問?</h4>
+<pre><code>//加⼊auth中介層可受到登⼊限定保護
+
+class UserController extends Controller
+{
+ public function __construct()
+ {
+ ….
+ $this-&gt;middleware('auth');
+ }
+}
+</code></pre><hr>
+<p>控制器Action的登入保護⽰範</p>
+<p>為什麼要把邏輯寫在Controller⽽ 非Route?</p>
+<p>• ⽅可啟⽤Cache機制，可增速100倍</p>
+<p>• 符合MVC架構</p>
+<hr>
+<p>⽣成網⾴路徑Helper Function</p>
+<p>url()可根據路徑⽣成網址</p>
+<p>url( ‘route path’ )</p>
+<p>route()可根據路由名稱⽣成網址</p>
+<p>route(‘route.name’,[‘id’=&gt;1])</p>
+<hr>
+<h4 id="傳值程式碼">傳值程式碼</h4>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
+{
+    public function signup(Request $request , $id , $course)
+    {
+        $data = ['id' =&gt; $id , 'course' =&gt; $course , 'url' =&gt; '&lt;a href=&quot;http://goblinlab.org&quot;&gt;http://goblinlab.org&lt;/a&gt;'];
+        $url =  '&lt;a href=&quot;http://goblinlab.org&quot;&gt;http://goblinlab.org&lt;/a&gt;';
+        
+        //作法1 利用view()的第2參數來傳
+        return view('signup',$data);
+        
+        //作法2 利用with()方法來傳
+        return view('signup')-&gt;with($data);
+        
+        //作法3 搭配compact()來建立陣列
+        return view('signup',compact('id','course','url'));
+    }
+}
+</code></pre><hr>
+<h4 id="視圖接收參數寫法">視圖接收參數寫法</h4>
+<pre><code>跳脫程式內容來進行輸出 {{ $id }} &lt;br&gt;
+
+會渲染程式內容並執行來進行輸出 {!! $code !!}&lt;br&gt;
+</code></pre><hr>
+<h4 id="路由的寫法">路由的寫法</h4>
+<pre><code>//8.x以上版本需補上命名空間
+Route::get('/users/{id}/courses/{course}', 'App\Http\Controllers\HomeController@signup');
+</code></pre><hr>
+<h4 id="建立帶resources方法的控制器">建立帶resources方法的控制器</h4>
+<pre><code>php artisan make:controller ItemController --resource --model=Item
+
+–resource 表示希望順便生成7個CRUD方法
+–model 表示希望順便加入載入Model的程式碼，可自己加
+</code></pre><hr>
+<h4 id="建立resources-路由">建立resources 路由</h4>
+<pre><code>//建立單一表格resource
+Route::resource('items','App\Http\Controllers\ItemController');
+</code></pre><p>第一參數為路徑前綴，通常與關連表格名稱相同
+第二參數為所接手的控制器名稱</p>
+<pre><code>/建立多個表格的resource
+Route::resources([
+    'items' =&gt; 'App\Http\Controllers\ItemController',
+    'posts' =&gt; 'App\Http\Controllers\PostController',
+]);
+</code></pre><h4 id="建立帶api-resources方法的控制器">建立帶api resources方法的控制器</h4>
+<pre><code>php artisan make:controller PostController --api --model=Post
+</code></pre><hr>
+<h4 id="建立api-resources-路由">建立api resources 路由</h4>
+<pre><code>Route::apiResource(‘posts’,‘App\Http\Controllers\PostController’);
+</code></pre><hr>
+<h4 id="保護控制器裡的action">保護控制器裡的Action</h4>
+<pre><code>class HomeController extends Controller
+{
+    public function __construct(){
+        //此控制器的所有方法都需要有登入才能訪問
+        $this-&gt;middleware('auth');
+        
+        //此控制器的store()需要有登入才能訪問
+        $this-&gt;middleware('auth')-&gt;only('store');
+        
+        //除index()外，此控制器的其他方法需要有登入才能訪問
+        $this-&gt;middleware('auth')-&gt;except('index');
+    }
+</code></pre><hr>
+<h4 id="在路由檔內加入中介層保護">在路由檔內加入中介層保護</h4>
+<pre><code>//此路由需要登入才能訪問
+Route::get('/users/{id}/courses/{course}', 'App\Http\Controllers\HomeController@signup')-&gt;middleware('auth');
+</code></pre><hr>
+<h4 id="生成網址">生成網址</h4>
+<pre><code>{{ url(路由路徑) }}
+{{ route(路由名稱) }}
+</code></pre><hr>
+<p><strong>課後總結</strong></p>
+<p><strong>控制器練習作業</strong></p>
+<p><strong>⽣成控制器指令 能⽤make指令⽣成控制器類別</strong></p>
+<p><strong>把值傳送給視圖後回應 能⽤三種⽅法之⼀來傳送多個值給View</strong></p>
+<p><strong>掌握資源控制器 能建⽴Item這個資源的控制器，並⽣成7個 對應Action</strong></p>
+<p><a href="https://laravel.tw/docs/5.2/controllers">參考資料</a></p>
 
                 </div>
 
