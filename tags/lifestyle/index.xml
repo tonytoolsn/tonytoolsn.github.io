@@ -6,7 +6,20 @@
     <description>Recent content in LIFESTYLE on Tony&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 15 Nov 2020 13:00:00 +0800</lastBuildDate><atom:link href="https://tonytoolsn.github.io/tags/lifestyle/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 13:00:00 +0800</lastBuildDate><atom:link href="https://tonytoolsn.github.io/tags/lifestyle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Pages架設靜態網</title>
+      <link>https://tonytoolsn.github.io/blog/lifestyle_free_page/</link>
+      <pubDate>Mon, 16 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/lifestyle_free_page/</guid>
+      <description>GitHub Pages架設靜態網站 1.架設工具介紹 1.1工具介紹
+Github介紹?
+Github是一個透過Git進行版本控制的code放置平台
+GitHub Pages介紹?
+GitHub Pages是把你上傳的html程式碼轉換成網站</description>
+    </item>
+    
     <item>
       <title>個人文章撰寫流程紀錄</title>
       <link>https://tonytoolsn.github.io/blog/lifestyle_article/</link>
@@ -33,6 +46,22 @@
       <guid>https://tonytoolsn.github.io/blog/lifestyle_url/</guid>
       <description>jquery
 FullCalendar - 滿版行事曆</description>
+    </item>
+    
+    <item>
+      <title>Strikingly ─ 免費中文建站工具</title>
+      <link>https://tonytoolsn.github.io/blog/lifestyle_strikingly/</link>
+      <pubDate>Tue, 10 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://tonytoolsn.github.io/blog/lifestyle_strikingly/</guid>
+      <description>1.Strikingly介紹 :
+Strikingly是一個支援繁中語系且完全免費的架站服務，不需額外安裝軟體，只要透過瀏覽器即可編輯並發佈網站，而Strikingly視覺化的頁面編輯器也非常輕巧容易上手。
+Strikingly
+Strikingly教學
+中文免費網站架設平台推薦—Strikingly
+2.QRCODE介紹 :
+QRCODE可以填上很多種資訊，除了網址、甚至可以是email！提示：連上QRCode-Quickmark，點選「製作條碼」、「電子郵件」。
+QRCode-Quickmark</description>
     </item>
     
   </channel>

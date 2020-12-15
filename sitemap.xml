@@ -33,6 +33,21 @@
   </url>
   
   <url>
+    <loc>https://tonytoolsn.github.io/blog/lifestyle_free_page/</loc>
+    <lastmod>2020-11-16T13:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tonytoolsn.github.io/tags/lifestyle/</loc>
+    <lastmod>2020-11-16T13:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tonytoolsn.github.io/categories/lifestyle/</loc>
+    <lastmod>2020-11-16T13:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tonytoolsn.github.io/tags/jquery/</loc>
     <lastmod>2020-11-16T08:00:00+08:00</lastmod>
   </url>
@@ -65,16 +80,6 @@
   <url>
     <loc>https://tonytoolsn.github.io/blog/laravel_mvc/</loc>
     <lastmod>2020-11-15T23:20:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tonytoolsn.github.io/tags/lifestyle/</loc>
-    <lastmod>2020-11-15T13:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tonytoolsn.github.io/categories/lifestyle/</loc>
-    <lastmod>2020-11-15T13:00:00+08:00</lastmod>
   </url>
   
   <url>
@@ -135,6 +140,11 @@
   <url>
     <loc>https://tonytoolsn.github.io/tags/python/</loc>
     <lastmod>2020-11-15T08:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tonytoolsn.github.io/blog/lifestyle_strikingly/</loc>
+    <lastmod>2020-11-10T13:00:00+08:00</lastmod>
   </url>
   
   <url>
